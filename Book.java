@@ -2,13 +2,13 @@ public class Book {
     private int id;
     private String title;
     private String author;
-    private boolean isAvailable;
+    private boolean available;
 
-    public Book(int id, String title, String author) {
+    public Book(int id, String title, String author, boolean available) {
         this.id = id;
         this.title = title;
         this.author = author;
-        this.isAvailable = true;
+        this.available = available;
     }
 
     public int getId() {
@@ -24,15 +24,10 @@ public class Book {
     }
 
     public boolean isAvailable() {
-        return isAvailable;
+        return available;
     }
 
     public void setAvailable(boolean available) {
-        isAvailable = available;
-    }
-
-    @Override
-    public String toString() {
-        return id + " - " + title + " by " + author + " (" + (isAvailable ? "Available" : "Issued") + ")";
+        this.available = available;
     }
 }
